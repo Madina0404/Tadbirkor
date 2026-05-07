@@ -10,14 +10,17 @@
 
     <header class="hero-container">
         <div class="hero-content">
-            <h1 class="fade-in">Tikuvchi </h1>
+            <div>
+                <h1 class="fade-in">Tikuvchi  </h1>
+                <p  class="fade-in">Did bilan tikilgan zamonaviy va milliy liboslar</p>
+            </div>
             <div class="banner-image-wrapper">
                 <img class="bannerphoto" src="images/ayol.jpg" alt="Tikuv jarayoni">
             </div>
         </div>
         
         <div class="hero-info fade-in-delay">
-            <img src="images/profile.jpg" alt="Tikuvchi ayol">
+            <img src="/images/photo_logo.jpg" alt="Tikuvchi ayol">
             <div>
                 <h2>Sapayeva Rayhon</h2>
                 <h3>Prafisional tikuvchi</h3>
@@ -29,18 +32,41 @@
 
     <section id="about" class="section-container">
         <h2>Men haqimda</h2>
-        <p>
-            Men ko‘p yillik tajribaga ega tikuvchi ayolman. 
-            Har bir kiyimni mehr bilan tikaman va mijozlarimni xursand qilish mening maqsadim.
-        </p>
+        <div class="aboutShe">
+            <img class="tadbirkorHaqida" src="/images/photo_tadbirkor.jpg" alt="">
+
+            <p>
+                Men ko‘p yillik tajribaga ega tikuvchi ayolman. 
+                Har bir kiyimni mehr bilan tikaman va mijozlarimni xursand qilish mening maqsadim.
+                Kiyim qulay bo'lishi uchun mayda detallargacha etibor beraman. O'lchamni aniq olib ideal fason tayyorlayman.
+                
+            </p>
+        </div>
     </section>
+
+    <section class="section-container">
+    <h2>Sertifikat</h2>
+
+    <div class="certificate-box">
+        <img src="images/sertifikat.jpg" alt="Tadbirkorlik sertifikati">
+
+        <div class="certificate-text">
+            <h3>Tadbirkorlik sertifikati</h3>
+
+            <p>
+                Tikuvchilik va tadbirkorlik faoliyati bo‘yicha
+                muvaffaqiyatli o‘quv kursini tamomlagan.
+            </p>
+        </div>
+    </div>
+</section>
 
     <section id="works" class="section-container">
         <h2>Ishlarim</h2>
         <div class="gallery">
-            <img src="images/work1.jpg" alt="Tikilgan kiyim 1">
-            <img src="images/work2.jpg" alt="Tikilgan kiyim 2">
-            <img src="images/work3.jpg" alt="Tikilgan kiyim 3">
+            <img src="images/photo_koylak.jpg" alt="Tikilgan kiyim 1">
+            <img src="images/photo_koylak2.jpg" alt="Tikilgan kiyim 2">
+            <img src="images/photo_milliylibos.jpg" alt="Tikilgan kiyim 3">
         </div>
     </section>
 
@@ -50,9 +76,6 @@
             <div class="contact-card">
                 <p>📞 Telefon: <a href="tel:+998974531150">+998 97 4531150</a></p>
             </div>
-            <div class="contact-card">
-                <p>📷 Instagram: <a href="https://instagram.com/tikuvchi_ayol" target="_blank">@tikuvchi_ayol</a></p>
-            </div>
         </div>
     </section>
 
@@ -61,5 +84,9 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- Kattalashadigan modal -->
+<div class="image-modal" id="imageModal">
+    <img id="modalImg" src="" alt="">
+</div>
 </body>
 </html>
