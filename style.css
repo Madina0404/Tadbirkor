@@ -1,0 +1,354 @@
+/* Umumiy sozlamalar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fdf5f7;
+    line-height: 1.6;
+}
+
+/* Hero section */
+.hero-container {
+    background: linear-gradient(135deg, #ff6f91 0%, #ff8da6 100%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Banner rasm */
+.banner-image-wrapper {
+    width: 350px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s ease;
+}
+
+.banner-image-wrapper:hover {
+    transform: scale(1.03);
+}
+
+.bannerphoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hero info */
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.hero-info img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    animation: pulse 2s infinite;
+}
+
+.hero-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.hero-info p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* Tugma */
+.glow-on-hover {
+    padding: 12px 35px;
+    background: white;
+    color: #ff6f91;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.4s ease;
+}
+
+.glow-on-hover:hover {
+    background: #ffecf1;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255,255,255,0.4);
+}
+
+/* Section */
+.section-container {
+    padding: 80px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6f91;
+    position: relative;
+}
+
+.section-container h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #ff6f91;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Men haqimda */
+.aboutShe {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ff6f91;
+    color: white;
+    border-radius: 15px;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+.aboutShe:hover {
+    background-color: #ff144b;
+}
+
+.tadbirkorHaqida {
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    box-shadow: 0 15px 35px rgba(255,111,145,0.5);
+}
+
+/* Modal */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal img {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 20px;
+    animation: zoomIn 0.4s ease;
+}
+
+/* Aloqa */
+.contact-section {
+    background: white;
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: #fdf5f7;
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: 1px solid #ffccd8;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    background: #ffe6ec;
+    box-shadow: 0 5px 15px rgba(255,111,145,0.2);
+}
+
+.contact-card a {
+    color: #ff6f91;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background: #ff6f91;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9rem;
+}
+
+/* Animatsiyalar */
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.fade-in-delay {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.certificate-box{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+}
+
+.certificate-box img{
+    width: 320px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.certificate-box img:hover{
+    transform: scale(1.03);
+}
+
+.certificate-text{
+    flex: 1;
+    text-align: left;
+}
+
+.certificate-text h3{
+    color: #ff6f91;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(255,255,255,0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .hero-content,
+    .aboutShe {
+        flex-direction: column;
+    }
+
+    .tadbirkorHaqida {
+        width: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
