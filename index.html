@@ -12,7 +12,7 @@
         <div class="hero-content">
             <div>
                 <h1 class="fade-in">Tikuvchi  </h1>
-                <p  class="fade-in">Did bilan tikilgan zamonaviy va milliy liboslar</p>
+                <p  class="fade-inn">Did bilan tikilgan zamonaviy va milliy liboslar</p>
             </div>
             <div class="banner-image-wrapper">
                 <img class="bannerphoto" src="images/ayol.jpg" alt="Tikuv jarayoni">
@@ -61,13 +61,19 @@
 </section>
 
     <section id="works" class="section-container">
-        <h2>Ishlarim</h2>
-        <div class="gallery">
-            <img src="images/photo_koylak.jpg" alt="Tikilgan kiyim 1">
-            <img src="images/photo_koylak2.jpg" alt="Tikilgan kiyim 2">
-            <img src="images/photo_milliylibos.jpg" alt="Tikilgan kiyim 3">
-        </div>
-    </section>
+    <h2>Ishlarim</h2>
+
+    <div id="gallery" class="gallery">
+        <img id="img1" src="images/photo_koylak.jpg" alt="Tikilgan kiyim 1">
+
+        <img id="img2" src="images/photo_koylak2.jpg" alt="Tikilgan kiyim 2">
+
+        <img id="img3" src="images/photo_milliylibos.jpg" alt="Tikilgan kiyim 3">
+    </div>
+    <div id="imageModal">
+    <img id="modalImg">
+</div>
+</section>
 
     <section id="contact" class="section-container contact-section">
         <h2>Aloqa</h2>
@@ -81,11 +87,10 @@
     <footer>
         <p>© 2026 Tikuvchi Portfolio. Barcha huquqlar himoyalangan.</p>
     </footer>
-
-    <script src="script.js"></script>
-    <!-- Kattalashadigan modal -->
-<div class="image-modal" id="imageModal">
-    <img id="modalImg" src="" alt="">
+<div id="modalContainer" class="image-modal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="Kattalashtirilgan rasm">
 </div>
+    <script src="script.js"></script>
+
 </body>
 </html>

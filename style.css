@@ -189,19 +189,34 @@ body {
 }
 
 /* Modal */
+/* Modal oynasi uchun yangilangan uslub */
 .image-modal {
     display: none;
     position: fixed;
-    z-index: 999;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.7); /* Orqa fon qoraligi */
+    backdrop-filter: blur(8px);    /* Orqa fonni xira qilish */
     justify-content: center;
     align-items: center;
+    cursor: zoom-out;              /* Yopish mumkinligini bildiruvchi kursor */
 }
 
+.image-modal img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease-out; /* Ochilish animatsiyasi */
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
 .image-modal img {
     width: 80%;
     max-width: 700px;
@@ -351,4 +366,69 @@ footer {
     .hero-content h1 {
         font-size: 2.2rem;
     }
+}
+
+
+#imageModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+#modalImg {
+    width: 20%;
+    height: 80%;
+
+    border-radius: 20px;
+
+    transform: scale(0.5);
+    opacity: 0;
+
+    transition: 1s;
+}
+#imageModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+#modalImg {
+    width: 20%;
+    height: 80%;
+
+    border-radius: 20px;
+
+    transform: scale(0.5);
+    opacity: 0;
+
+    transition: 1s;
+}
+@media screen and (max-width: 700px) {
+
+    #modalImg {
+        width: 50%;
+        height: auto;
+    }
+
+}
+
+/* TELEFON UCHUN */
+@media screen and (max-width: 400px) {
+
+    #modalImg {
+        width: 90%;
+        height: auto;
+    }
+
 }
