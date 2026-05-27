@@ -8,72 +8,142 @@
 </head>
 <body>
 
+    <!-- Sticky Navbar -->
+    <nav id="sticky-navbar" class="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <p>
+                    Sapayeva Rayhon
+                </p>
+                <img class="tikuvLogo" src="https://i.pinimg.com/originals/2f/e3/37/2fe3370b3b534593c10f3512e845110f.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">Men haqimda</a></li>
+                <li><a href="#works">Ishlarim</a></li>
+                <li><a href="#contact">Aloqa</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="hero-container">
         <div class="hero-content">
             <div>
-                <h1 class="fade-in">Tikuvchi  </h1>
-                <p  class="fade-inn">Did bilan tikilgan zamonaviy va milliy liboslar</p>
+                <h1 class="fade-in">Tikuvchi</h1>
+                <p class="fade-inn">Did bilan tikilgan zamonaviy va milliy liboslar</p>
             </div>
             <div class="banner-image-wrapper">
                 <img class="bannerphoto" src="images/ayol.jpg" alt="Tikuv jarayoni">
             </div>
         </div>
-        
+
         <div class="hero-info fade-in-delay">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzo0SnCRxDSyLKlTK-xa34ibtMpmiSI5n-Mw&s" alt="Tikuvchi ayol">
             <div>
                 <h2>Sapayeva Rayhon</h2>
                 <h3>Prafisional tikuvchi</h3>
             </div>
-                <p>Ayollar uchun zamonaviy va milliy kiyimlar tikaman</p>
-            <button class="glow-on-hover" onclick="showMessage()">Bog‘lanish</button>
+            <p>Ayollar uchun zamonaviy va milliy kiyimlar tikaman</p>
+            <button class="glow-on-hover" onclick="showMessage()">Bog'lanish</button>
         </div>
     </header>
 
-    <section id="about" class="section-container">
-        <h2>Men haqimda</h2>
-        <div class="aboutShe">
-            <img class="tadbirkorHaqida" src="/images/photo_tadbirkor.jpg" alt="">
-            <p>
-                Men ko‘p yillik tajribaga ega tikuvchi ayolman. 
-                Har bir kiyimni mehr bilan tikaman va mijozlarimni xursand qilish mening maqsadim.
-                Kiyim qulay bo'lishi uchun mayda detallargacha etibor beraman. O'lchamni aniq olib ideal fason tayyorlayman.
-                
+   <section id="about" class="section-container">
+    <h2>Men haqimda</h2>
+    <div class="aboutShe">
+        <img class="tadbirkorHaqida" src="images/photo_tadbirkor.jpg" alt="">
+
+        <div class="about-right">
+            <p class="about-text">
+                Men ko'p yillik tajribaga ega tikuvchi ayolman.
+                Har bir kiyimni mehr bilan tikaman va mijozlarimni
+                xursand qilish mening maqsadim. O'lchamni aniq olib
+                ideal fason tayyorlayman.
             </p>
+
+            <!-- Statistika -->
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Yillik tajriba</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Mijozlar</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Tikilgan liboslar</span>
+                </div>
+            </div>
+
+            <!-- Ko'nikmalar -->
+            <div class="skills">
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>Milliy kiyim</span>
+                        <span>95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="95"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>Zamonaviy fason</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>To'ylik liboslar</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="85"></div>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>Bolalar kiyimi</span>
+                        <span>88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-width="88"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="section-container">
+        <h2>Sertifikat</h2>
+        <div class="certificate-box">
+            <img src="images/sertifikat.jpg" alt="Tadbirkorlik sertifikati">
+            <div class="certificate-text">
+                <h3>Tadbirkorlik sertifikati</h3>
+                <p>
+                    Tikuvchilik va tadbirkorlik faoliyati bo'yicha
+                    muvaffaqiyatli o'quv kursini tamomlagan.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="section-container">
-    <h2>Sertifikat</h2>
-
-    <div class="certificate-box">
-        <img src="images/sertifikat.jpg" alt="Tadbirkorlik sertifikati">
-
-        <div class="certificate-text">
-            <h3>Tadbirkorlik sertifikati</h3>
-
-            <p>
-                Tikuvchilik va tadbirkorlik faoliyati bo‘yicha
-                muvaffaqiyatli o‘quv kursini tamomlagan.
-            </p>
-        </div>
-    </div>
-</section>
-
     <section id="works" class="section-container">
-    <h2>Ishlarim</h2>
-
-    <div id="gallery" class="gallery">
-        <img id="img1" src="images/photo_koylak.jpg" alt="Tikilgan kiyim 1">
-
-        <img id="img2" src="images/photo_koylak2.jpg" alt="Tikilgan kiyim 2">
-
-        <img id="img3" src="images/photo_milliylibos.jpg" alt="Tikilgan kiyim 3">
-    </div>
-    <div id="imageModal">
-    <img id="modalImg">
-</div>
-</section>
+        <h2>Ishlarim</h2>
+        <div id="gallery" class="gallery">
+            <img id="img1" src="images/photo_koylak.jpg" alt="Tikilgan kiyim 1">
+            <img id="img2" src="images/photo_koylak2.jpg" alt="Tikilgan kiyim 2">
+            <img id="img3" src="images/photo_milliylibos.jpg" alt="Tikilgan kiyim 3">
+        </div>
+    </section>
 
     <section id="contact" class="section-container contact-section">
         <h2>Aloqa</h2>
@@ -87,10 +157,12 @@
     <footer>
         <p>© 2026 Tikuvchi Portfolio. Barcha huquqlar himoyalangan.</p>
     </footer>
-<div id="modalContainer" class="image-modal" onclick="closeModal()">
-    <img id="modalImage" src="" alt="Kattalashtirilgan rasm">
-</div>
-    <script src="script.js"></script>
 
+    <!-- Yagona Modal -->
+    <div id="imageModal">
+        <img id="modalImg">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -12,7 +12,75 @@ body {
     line-height: 1.6;
 }
 
-/* Hero section */
+/* =====================
+   STICKY NAVBAR
+===================== */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 20px rgba(250, 67, 159, 0.425);
+    z-index: 999;
+    pointer-events: none;
+    transform: translateY(-100%);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    opacity: 0;
+}
+
+.sticky-nav.visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-weight: 600;
+    font-size: 16px;
+    color: #e91e8c;
+    display: flex;
+    align-items: center;
+}
+
+.tikuvLogo {
+    width: 10%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: #e91e8c;
+}
+
+/* =====================
+   HERO SECTION
+===================== */
 .hero-container {
     background: linear-gradient(135deg, #ff6f91 0%, #ff8da6 100%);
     color: white;
@@ -40,7 +108,6 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Banner rasm */
 .banner-image-wrapper {
     width: 350px;
     height: 300px;
@@ -61,7 +128,6 @@ body {
     object-fit: cover;
 }
 
-/* Hero info */
 .hero-info {
     display: flex;
     flex-direction: column;
@@ -97,7 +163,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Tugma */
 .glow-on-hover {
     padding: 12px 35px;
     background: white;
@@ -117,7 +182,9 @@ body {
     box-shadow: 0 8px 25px rgba(255,255,255,0.4);
 }
 
-/* Section */
+/* =====================
+   SECTION UMUMIY
+===================== */
 .section-container {
     padding: 80px 20px;
     max-width: 1100px;
@@ -142,15 +209,17 @@ body {
     border-radius: 2px;
 }
 
-/* Men haqimda */
+/* =====================
+   MEN HAQIMDA
+===================== */
 .aboutShe {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     background-color: #ff6f91;
     color: white;
     border-radius: 15px;
-    padding: 15px;
+    padding: 25px;
     transition: 0.5s;
 }
 
@@ -161,9 +230,127 @@ body {
 .tadbirkorHaqida {
     width: 30%;
     border-radius: 10px;
+    cursor: pointer;
 }
 
-/* Gallery */
+.about-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.95;
+    text-align: left;
+}
+
+/* Statistika */
+.about-stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 12px 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 80px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: white;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.75rem;
+    opacity: 0.85;
+    margin-top: 2px;
+}
+
+/* Progress bar */
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-item {
+    width: 100%;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    width: 0%;
+    background: white;
+    border-radius: 10px;
+    transition: width 1.2s ease;
+}
+
+/* =====================
+   SERTIFIKAT
+===================== */
+.certificate-box {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+}
+
+.certificate-box img {
+    width: 320px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.certificate-box img:hover {
+    transform: scale(1.03);
+}
+
+.certificate-text {
+    flex: 1;
+    text-align: left;
+}
+
+.certificate-text h3 {
+    color: #ff6f91;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+/* =====================
+   GALLERY
+===================== */
 .gallery {
     display: flex;
     justify-content: center;
@@ -188,43 +375,35 @@ body {
     box-shadow: 0 15px 35px rgba(255,111,145,0.5);
 }
 
-/* Modal */
-/* Modal oynasi uchun yangilangan uslub */
-.image-modal {
+/* =====================
+   MODAL (yagona)
+===================== */
+#imageModal {
     display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Orqa fon qoraligi */
-    backdrop-filter: blur(8px);    /* Orqa fonni xira qilish */
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
     justify-content: center;
     align-items: center;
-    cursor: zoom-out;              /* Yopish mumkinligini bildiruvchi kursor */
+    z-index: 2000;
+    cursor: zoom-out;
 }
 
-.image-modal img {
-    max-width: 90%;
-    max-height: 85%;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    animation: zoomIn 0.3s ease-out; /* Ochilish animatsiyasi */
-}
-
-@keyframes zoomIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-}
-.image-modal img {
-    width: 80%;
-    max-width: 700px;
+#modalImg {
+    max-width: 85%;
+    max-height: 85vh;
     border-radius: 20px;
-    animation: zoomIn 0.4s ease;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    object-fit: contain;
 }
 
-/* Aloqa */
+/* =====================
+   ALOQA
+===================== */
 .contact-section {
     background: white;
     border-radius: 30px 30px 0 0;
@@ -258,7 +437,9 @@ body {
     font-weight: bold;
 }
 
-/* Footer */
+/* =====================
+   FOOTER
+===================== */
 footer {
     background: #ff6f91;
     color: white;
@@ -267,7 +448,9 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Animatsiyalar */
+/* =====================
+   ANIMATSIYALAR
+===================== */
 .fade-in {
     animation: fadeIn 1.2s ease-in-out;
 }
@@ -276,44 +459,11 @@ footer {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-.certificate-box{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    flex-wrap: wrap;
-}
-
-.certificate-box img{
-    width: 320px;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: 0.4s;
-}
-
-.certificate-box img:hover{
-    transform: scale(1.03);
-}
-
-.certificate-text{
-    flex: 1;
-    text-align: left;
-}
-
-.certificate-text h3{
-    color: #ff6f91;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-}
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -321,34 +471,20 @@ footer {
 }
 
 @keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
-    }
-
-    70% {
-        box-shadow: 0 0 0 15px rgba(255,255,255,0);
-    }
-
-    100% {
-        box-shadow: 0 0 0 0 rgba(255,255,255,0);
-    }
+    0%   { box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
+    70%  { box-shadow: 0 0 0 15px rgba(255,255,255,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
 }
 
 @keyframes zoomIn {
-    from {
-        transform: scale(0.7);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
+    from { transform: scale(0.7); opacity: 0; }
+    to   { transform: scale(1);   opacity: 1; }
 }
 
-/* Responsive */
+/* =====================
+   RESPONSIVE
+===================== */
 @media (max-width: 768px) {
-
     .hero-content,
     .aboutShe {
         flex-direction: column;
@@ -366,69 +502,18 @@ footer {
     .hero-content h1 {
         font-size: 2.2rem;
     }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .about-stats {
+        justify-content: center;
+    }
 }
 
-
-#imageModal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-
-    z-index: 1000;
-}
-
-#modalImg {
-    width: 20%;
-    height: 80%;
-
-    border-radius: 20px;
-
-    transform: scale(0.5);
-    opacity: 0;
-
-    transition: 1s;
-}
-#imageModal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.8);
-
-    justify-content: center;
-    align-items: center;
-
-    z-index: 1000;
-}
-
-#modalImg {
-    width: 20%;
-    height: 80%;
-
-    border-radius: 20px;
-
-    transform: scale(0.5);
-    opacity: 0;
-
-    transition: 1s;
-}
 @media screen and (max-width: 700px) {
-
     #modalImg {
-        width: 50%;
-        height: auto;
+        max-width: 90%;
     }
-
-}
-
-/* TELEFON UCHUN */
-@media screen and (max-width: 400px) {
-
-    #modalImg {
-        width: 90%;
-        height: auto;
-    }
-
 }
